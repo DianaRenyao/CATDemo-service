@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="buptspirit.spm.persistence" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/spm</non-jta-data-source>
+
+        <class>buptspirit.spm.persistence.entity.ChapterEntity</class>
+        <class>buptspirit.spm.persistence.entity.CourseEntity</class>
+        <class>buptspirit.spm.persistence.entity.ExamEntity</class>
+        <class>buptspirit.spm.persistence.entity.ExperimentEntity</class>
+        <class>buptspirit.spm.persistence.entity.ExperimentFileEntity</class>
+        <class>buptspirit.spm.persistence.entity.MessageEntity</class>
+        <class>buptspirit.spm.persistence.entity.NoticeEntity</class>
+        <class>buptspirit.spm.persistence.entity.QuestionEntity</class>
+        <class>buptspirit.spm.persistence.entity.SectionEntity</class>
+        <class>buptspirit.spm.persistence.entity.SectionFileEntity</class>
+        <class>buptspirit.spm.persistence.entity.SelectedCourseEntity</class>
+        <class>buptspirit.spm.persistence.entity.StudentEntity</class>
+        <class>buptspirit.spm.persistence.entity.StudentCourseExperimentEntity</class>
+        <class>buptspirit.spm.persistence.entity.TeacherEntity</class>
+        <class>buptspirit.spm.persistence.entity.UserInfoEntity</class>
+        <class>buptspirit.spm.persistence.entity.ApplicationEntity</class>
+        <class>buptspirit.spm.persistence.entity.FileSourceEntity</class>
+        <class>buptspirit.spm.persistence.entity.QuestionOptionEntity</class>
+        <class>buptspirit.spm.persistence.entity.TokenSecretEntity</class>
+        <class>buptspirit.spm.persistence.entity.ExamScoreEntity</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
